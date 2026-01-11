@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A client-side password strength checker tool for cybersecurity education.">
+    <title>Password Strength Checker - Cybersecurity Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Password Strength Checker</h1>
+        <p>A front-end tool to evaluate password security in real-time. No data is stored or sent anywhere.</p>
+    </header>
+    
+    <main>
+        <section id="input-section">
+            <label for="password">Enter Password:</label>
+            <input type="password" id="password" placeholder="Type your password here" aria-describedby="strength-meter" autocomplete="off">
+            <button id="toggle-visibility" aria-label="Toggle password visibility">👁️</button>
+        </section>
+        
+        <section id="strength-meter">
+            <div id="strength-bar"></div>
+            <p id="strength-text">Strength: <span id="strength-level">Weak</span></p>
+            <ul id="feedback-list" aria-live="polite">
+                <!-- Feedback items will be dynamically added here -->
+            </ul>
+        </section>
+        
+        <section id="actions">
+            <button id="generate-password">Generate Strong Password</button>
+            <button id="copy-password" disabled>Copy to Clipboard</button>
+            <button id="toggle-dark-mode">Toggle Dark Mode</button>
+        </section>
+        
+        <section id="info">
+            <h2>How Strength is Calculated</h2>
+            <ul>
+                <li>Length: At least 12 characters (bonus for 16+).</li>
+                <li>Variety: Uppercase, lowercase, numbers, symbols.</li>
+                <li>Avoids common patterns (e.g., 'password', sequential keys).</li>
+                <li>Score: 0-100 (Weak <40, Medium 40-70, Strong >70).</li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2026 Cybersecurity Tools Demo. For educational purposes only.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+              </html>
+  
